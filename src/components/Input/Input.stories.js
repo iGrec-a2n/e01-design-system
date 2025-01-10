@@ -1,8 +1,12 @@
-import { Input } from './Form';
+import { Input } from './Input';
 
 export default {
   title: 'Components/Input',
   component: Input,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
 };
 
 export const TextInput = () => (
