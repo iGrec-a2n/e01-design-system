@@ -1,8 +1,10 @@
 import './Input.css';
 import { useState } from 'react';
+import EyeShow from '../../assets/eye-show.svg'; 
+import EyeHide from '../../assets/eye-hide.svg'; 
 
 export default function Input({ index, type, name, placeholder }) {
-  const [inputType, setInputType] = useState("text");
+  const [inputType, setInputType] = useState("password");
 
   const togglePasswordVisibility = () => {
     setInputType((prevType) => (prevType === 'text' ? 'password' : 'text'));
@@ -14,7 +16,12 @@ export default function Input({ index, type, name, placeholder }) {
       <span className='error'></span>
       <div className='input-box'>
         <input className='input-text' id={`input-${index}`} type={ inputType } name={ name } placeholder={ placeholder }/>
-        { type !== 'text' && <button className="icon" onClick={togglePasswordVisibility}>{inputType === 'password' ? '👁️':'🙈'}</button> }
+        { type !== 'text' && <button className="icon" onClick={togglePasswordVisibility}>
+            <img
+              src={inputType === "password" ? EyeShow : EyeHide}
+              alt={inputType === "password" ? "Show password" : "Hide password"}
+            />
+        </button> }
       </div>
     </div>
   );
