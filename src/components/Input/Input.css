@@ -28,7 +28,7 @@
 .input-text:focus,
 .input-text:-moz-focus, 
 .input-text:-webkit-focus {
-  border: 4px solid #1083DD;
+  border: 8px solid #1083DD;
   transition: all .3s ease reverse;
 }
 .input-box {
