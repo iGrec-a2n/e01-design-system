@@ -82,14 +82,18 @@ export default function Form({type}) {
     <div className="form-container">
       <h1>{type === "login" ? "CONNEXION" : "NOUVEAU MOT DE PASSE"}</h1>
       <form method="post" onSubmit={handleSubmit}>
-        {fields.map((field, index) => (
+        {fields.map((field, index) => (          
         field.type !== "submit" ? (
         <Input 
-        key={index} 
-        type={field.type}
-        name={field.name}
-        placeholder={field.placeholder}
-        labelValue={field.labelValue} />
+          key={index}
+          index={index} 
+          id={`input-${type}-${index}`}
+          type={field.type}
+          name={field.name}
+          placeholder={field.placeholder}
+          labelValue={field.labelValue}
+          onChange={handleChange} 
+          error={errors[field.name]} />
         ) : (
         <Button 
         key={index} 
