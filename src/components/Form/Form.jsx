@@ -80,7 +80,7 @@ export default function Form({type}) {
   const navigate = useNavigate();
   return (
     <div className="form-container">
-      <h1>{type === "login" ? "CONNEXION" : "NOUVEAU MOT DE PASSE"}</h1>
+      <h1 className="Heading-1">{type === "login" ? "CONNEXION" : "NOUVEAU MOT DE PASSE"}</h1>
       <form method="post" onSubmit={handleSubmit}>
         {fields.map((field, index) => (          
         field.type !== "submit" ? (

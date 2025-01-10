@@ -11,9 +11,6 @@ const config = {
     name: "@storybook/react-vite",
     options: {},
   },
-  core: {
-    builder: "storybook-builder-vite",
-  },
   async viteFinal(config) {
     // Merge custom configuration into the default config
     const { mergeConfig } = await import('vite');

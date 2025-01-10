@@ -1,5 +1,5 @@
 // Code: Main App component
-import './app.css';
+import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import Login from './pages/Login';
 import ResetPassword from './pages/ResetPassword';
